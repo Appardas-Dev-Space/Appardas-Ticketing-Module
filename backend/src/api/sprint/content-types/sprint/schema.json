@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sprints",
+  "info": {
+    "singularName": "sprint",
+    "pluralName": "sprints",
+    "displayName": "Sprint",
+    "description": "Time-boxed agile cycle"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "goal": {
+      "type": "text"
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": ["planned", "active", "completed"],
+      "default": "planned",
+      "required": true
+    },
+    "tickets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ticket.ticket",
+      "mappedBy": "sprint"
+    }
+  }
+}

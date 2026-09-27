@@ -1,0 +1,290 @@
+{
+  "backend/config/admin.ts": {
+    "mtime": 1790516242818.3132,
+    "hash": "5fedfb3ce2f525b393b1fe949893848b"
+  },
+  "backend/config/api.ts": {
+    "mtime": 1790516242817.999,
+    "hash": "b2abe1de7fc36ad2a77847537579e79d"
+  },
+  "backend/config/database.ts": {
+    "mtime": 1790516242819.1418,
+    "hash": "e183a82e123d46fcfa8532f41f45c6f8"
+  },
+  "backend/config/middlewares.ts": {
+    "mtime": 1790516242820.8894,
+    "hash": "46eb1a5d79f476e192cab2420845e348"
+  },
+  "backend/config/plugins.ts": {
+    "mtime": 1790516242819.7166,
+    "hash": "2ccada5f67c24e1971352dcb8b8c2ea1"
+  },
+  "backend/config/server.ts": {
+    "mtime": 1790516242819.9966,
+    "hash": "81e99da73dcc82f34ab1a3875d740c1c"
+  },
+  "backend/src/admin/app.example.tsx": {
+    "mtime": 1790516242823.5989,
+    "hash": "7a26c35cf1517ff2d6acfdeedb7ada94"
+  },
+  "backend/src/admin/vite.config.example.ts": {
+    "mtime": 1790516242825.4707,
+    "hash": "47217521e9cbeb1631678f5454a764f5"
+  },
+  "backend/src/api/activity-log/controllers/activity-log.ts": {
+    "mtime": 1790530721109.5525,
+    "hash": "449bb422d89e0ab1a00bbcd9e6ed24da"
+  },
+  "backend/src/api/activity-log/routes/activity-log.ts": {
+    "mtime": 1790530727061.1052,
+    "hash": "cf6545dc0b5687256b668447646d3124"
+  },
+  "backend/src/api/activity-log/services/activity-log.ts": {
+    "mtime": 1790530733405.1633,
+    "hash": "afb1e832a8b03aa8f227c76e4f3174e5"
+  },
+  "backend/src/api/comment/controllers/comment.ts": {
+    "mtime": 1790530670816.3323,
+    "hash": "aa7aa957567bc2c224e1f740708cbc20"
+  },
+  "backend/src/api/comment/routes/comment.ts": {
+    "mtime": 1790530676655.9045,
+    "hash": "e2d0b9eedafe016adf812497abd5c711"
+  },
+  "backend/src/api/comment/services/comment.ts": {
+    "mtime": 1790530681194.8345,
+    "hash": "2a861c83343e15a14201544a504e7169"
+  },
+  "backend/src/api/label/controllers/label.ts": {
+    "mtime": 1790530694805.6892,
+    "hash": "e89609299177edd88db53600cfb2d0f0"
+  },
+  "backend/src/api/label/routes/label.ts": {
+    "mtime": 1790532669283.7075,
+    "hash": "dccae3c937aecaea3614cdf09ed23f1e"
+  },
+  "backend/src/api/label/services/label.ts": {
+    "mtime": 1790530705253.0542,
+    "hash": "5848efd8e37a589afdafdd8ae888b475"
+  },
+  "backend/src/api/sprint/controllers/sprint.ts": {
+    "mtime": 1790530645976.105,
+    "hash": "f26f41c6a2220c04a923d38b3375fbef"
+  },
+  "backend/src/api/sprint/routes/sprint.ts": {
+    "mtime": 1790532628514.7205,
+    "hash": "2a705aadd29622d7b2f2202114890e69"
+  },
+  "backend/src/api/sprint/services/sprint.ts": {
+    "mtime": 1790530656833.086,
+    "hash": "1abbbe6868f366499b7efd35f71d5159"
+  },
+  "backend/src/api/ticket/controllers/ticket.ts": {
+    "mtime": 1790535602092.503,
+    "hash": "c1279c486e7d73cae083494fe2d67104"
+  },
+  "backend/src/api/ticket/routes/ticket.ts": {
+    "mtime": 1790532603494.8064,
+    "hash": "52df7972f8f117fe319d86faf24d95ac"
+  },
+  "backend/src/api/ticket/services/ticket.ts": {
+    "mtime": 1790530631825.101,
+    "hash": "f5ce8a0e6ad47bfac3ec7fc839640d86"
+  },
+  "backend/src/index.ts": {
+    "mtime": 1790537254267.8833,
+    "hash": "2a97a9acbbf84e77b651dc024f40ac28"
+  },
+  "backend/types/generated/components.d.ts": {
+    "mtime": 1790537418597.6033,
+    "hash": "0c2f693dcf0a4091e230e67c36c7851f"
+  },
+  "backend/types/generated/contentTypes.d.ts": {
+    "mtime": 1790537418596.5415,
+    "hash": "4361bc8db102aee3f08e43797302a76c"
+  },
+  "frontend/app/layout.tsx": {
+    "mtime": 1790517460126.7866,
+    "hash": "673700f702d57527e7497fd68eb182f9"
+  },
+  "frontend/app/page.tsx": {
+    "mtime": 1790536815848.601,
+    "hash": "9f8852ea241ac037616c6263bcac0ac6"
+  },
+  "frontend/components/providers.tsx": {
+    "mtime": 1790517437124.5122,
+    "hash": "4fa453b0c0458a7648c450be17e85fb1"
+  },
+  "frontend/components/ui/avatar.tsx": {
+    "mtime": 1790517416415.6008,
+    "hash": "6deb3f362fedc83cbc40fb644f62cae5"
+  },
+  "frontend/components/ui/badge.tsx": {
+    "mtime": 1790517506403.8188,
+    "hash": "3f4bb8f5a8ca42b8c37033cbc214dbb5"
+  },
+  "frontend/components/ui/button.tsx": {
+    "mtime": 1790517362670.9214,
+    "hash": "391e0dd273f9f99c8e91659e8f862bc7"
+  },
+  "frontend/components/ui/card.tsx": {
+    "mtime": 1790517391439.93,
+    "hash": "a62ce3a2a84ee66d9425a9bf1629cc9a"
+  },
+  "frontend/components/ui/dialog.tsx": {
+    "mtime": 1790517397274.2896,
+    "hash": "d524e29373c1c2b4c3244db39307d808"
+  },
+  "frontend/components/ui/dropdown-menu.tsx": {
+    "mtime": 1790517411810.9734,
+    "hash": "bca2c028b8f82ba905ece78d00e79621"
+  },
+  "frontend/components/ui/input.tsx": {
+    "mtime": 1790517502897.9624,
+    "hash": "18bce8595d0c43f0fff801f3f588a4dd"
+  },
+  "frontend/components/ui/label.tsx": {
+    "mtime": 1790517384920.7874,
+    "hash": "9ae41be41542762b206f62bfe87a9d11"
+  },
+  "frontend/components/ui/popover.tsx": {
+    "mtime": 1790517422978.651,
+    "hash": "b9c2484296a5862f250bc14898f64f3c"
+  },
+  "frontend/components/ui/select.tsx": {
+    "mtime": 1790517404418.096,
+    "hash": "fb5cc94c5432888ea3bd0493abc1b973"
+  },
+  "frontend/lib/utils.ts": {
+    "mtime": 1790517335297.2134,
+    "hash": "618d00bf4537ce84f9ba62c5b215fb30"
+  },
+  "frontend/next-env.d.ts": {
+    "mtime": 1790516955475.1309,
+    "hash": "b5ed9dd8b4c5ba8e5ab8e6a379c15838"
+  },
+  "frontend/next.config.mjs": {
+    "mtime": 1790516955475.8296,
+    "hash": "21958f5752add43cc47ab0ff5172cd46"
+  },
+  "frontend/postcss.config.mjs": {
+    "mtime": 1790516955476.5227,
+    "hash": "b7941c02b947e17ae32f67ae7e664ec8"
+  },
+  "frontend/tailwind.config.ts": {
+    "mtime": 1790517349394.295,
+    "hash": "db7b829fcdfc25c7b060519eaf19692a"
+  },
+  "IMPLEMENTATION_PLAN.md": {
+    "mtime": 1790515364164.7615,
+    "hash": "3aaa8df9686131f7fa276f426e65d172"
+  },
+  "README.md": {
+    "mtime": 1790503877394.6367,
+    "hash": "2f12106ff07bf7f77a4ff52dd0af1ae0"
+  },
+  "backend/README.md": {
+    "mtime": 1790516242810.343,
+    "hash": "f77fb8d07e0be46627bcfbb5c8e73e6f"
+  },
+  "backend/public/robots.txt": {
+    "mtime": 1790516242819.0461,
+    "hash": "4d5c17190572544f878930e8a3a4c174"
+  },
+  "frontend/README.md": {
+    "mtime": 1790516955473.1992,
+    "hash": "f15aaa42d5d299d091b1171097ea56ad"
+  },
+  "backend/favicon.png": {
+    "mtime": 1790516242810.3325,
+    "hash": "c7c8fc4422064a5eca0e863060ebff8b"
+  },
+  "backend/src/api/member/controllers/member.ts": {
+    "mtime": 1790533250274.1829,
+    "hash": "bddf3d775a8e5e078a5e93999b7c63f0"
+  },
+  "backend/src/api/member/routes/member.ts": {
+    "mtime": 1790533052629.8257,
+    "hash": "1738a0eb64e87642d402d110663108c0"
+  },
+  "backend/src/api/ticket/content-types/ticket/lifecycles.ts": {
+    "mtime": 1790535061498.3486,
+    "hash": "ebb2fe25d9fa48bacfe4370246261239"
+  },
+  "backend/src/api/ticket/routes/00-overdue.ts": {
+    "mtime": 1790535074383.1465,
+    "hash": "2b6d22a1db88b58b07e6bf913ea197a2"
+  },
+  "backend/src/extensions/users-permissions/strapi-server.ts": {
+    "mtime": 1790537392538.0706,
+    "hash": "31879afb1ae33b92470e6f3c0b764bca"
+  },
+  "backend/src/policies/is-manager.ts": {
+    "mtime": 1790532574573.484,
+    "hash": "e175c44a91ed392f62c49a0b1f3c946f"
+  },
+  "frontend/app/(app)/board/page.tsx": {
+    "mtime": 1790536789101.8525,
+    "hash": "93a98840471802a54e5e271a11f94085"
+  },
+  "frontend/app/(app)/dashboard/page.tsx": {
+    "mtime": 1790536805059.9556,
+    "hash": "38a5e268953e3170c86ffd4d5cc4cf0a"
+  },
+  "frontend/app/(app)/layout.tsx": {
+    "mtime": 1790536782028.728,
+    "hash": "4cad847163a8ebb1e0cc0f297858bbf3"
+  },
+  "frontend/app/(app)/members/page.tsx": {
+    "mtime": 1790536797189.3315,
+    "hash": "32f2d5bc167ca2251e84e1a2403c0877"
+  },
+  "frontend/app/(auth)/login/page.tsx": {
+    "mtime": 1790536753116.095,
+    "hash": "d7b5ec4154389cf0e07cbeeb76f0cf26"
+  },
+  "frontend/app/api/[...proxy]/route.ts": {
+    "mtime": 1790536699816.0833,
+    "hash": "fee072b8e71989b1726c13d948141978"
+  },
+  "frontend/app/api/auth/login/route.ts": {
+    "mtime": 1790536660070.5525,
+    "hash": "1cd6884ec5395a6f349c654209e869ef"
+  },
+  "frontend/app/api/auth/logout/route.ts": {
+    "mtime": 1790536668978.3196,
+    "hash": "566cea248b1f60045b86142ab875d832"
+  },
+  "frontend/app/api/auth/session/route.ts": {
+    "mtime": 1790536680580.9482,
+    "hash": "ea2e74b5ee78cd8b684fe9603ae6ca89"
+  },
+  "frontend/components/nav.tsx": {
+    "mtime": 1790536772971.2292,
+    "hash": "43c4787e2fcf38abfa02d8d5afb3c5c3"
+  },
+  "frontend/lib/api-client.ts": {
+    "mtime": 1790536904057.3628,
+    "hash": "011387f4a64aea289d12abc9e9686f78"
+  },
+  "frontend/lib/auth.ts": {
+    "mtime": 1790536894211.0693,
+    "hash": "0cc74b20f79973f2163be862616df88b"
+  },
+  "frontend/lib/config.ts": {
+    "mtime": 1790536624835.7458,
+    "hash": "d1217533c9719bce17760dddccdbc69c"
+  },
+  "frontend/lib/types.ts": {
+    "mtime": 1790536635282.1506,
+    "hash": "d64f93ea8fb3fa3a60ba1913f6afe9e1"
+  },
+  "frontend/lib/use-session.ts": {
+    "mtime": 1790536723354.223,
+    "hash": "254d91dd555ee632f1d263d23cc46890"
+  },
+  "frontend/middleware.ts": {
+    "mtime": 1790536714056.2302,
+    "hash": "456fb2d123ff4445d18caa1f51edfd27"
+  }
+}

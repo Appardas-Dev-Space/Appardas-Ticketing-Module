@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "activity_logs",
+  "info": {
+    "singularName": "activity-log",
+    "pluralName": "activity-logs",
+    "displayName": "Activity Log",
+    "description": "System-generated audit trail for ticket mutations"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "action": {
+      "type": "enumeration",
+      "enum": [
+        "created",
+        "status_changed",
+        "assigned",
+        "deadline_changed",
+        "priority_changed"
+      ],
+      "required": true
+    },
+    "fromValue": {
+      "type": "string"
+    },
+    "toValue": {
+      "type": "string"
+    },
+    "actor": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "ticket": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::ticket.ticket",
+      "inversedBy": "activities"
+    }
+  }
+}

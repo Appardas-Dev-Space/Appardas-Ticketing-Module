@@ -1,0 +1,1 @@
+{"nodes":[{"id":"controllers_ticket","label":"ticket.ts","file_type":"code","source_file":"backend/src/api/ticket/controllers/ticket.ts","source_location":"L1"}],"edges":[{"source":"controllers_ticket","target":"ref_strapi_strapi","relation":"imports_from","confidence":"EXTRACTED","source_file":"backend/src/api/ticket/controllers/ticket.ts","source_location":"L1","weight":1}]}

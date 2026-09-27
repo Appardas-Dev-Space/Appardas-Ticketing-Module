@@ -1,0 +1,1 @@
+{"nodes":[{"id":"routes_comment","label":"comment.ts","file_type":"code","source_file":"backend/src/api/comment/routes/comment.ts","source_location":"L1"}],"edges":[{"source":"routes_comment","target":"ref_strapi_strapi","relation":"imports_from","confidence":"EXTRACTED","source_file":"backend/src/api/comment/routes/comment.ts","source_location":"L1","weight":1}]}
