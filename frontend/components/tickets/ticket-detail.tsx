@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
+import { Skeleton } from "@/components/ui/skeleton";
 import {
   Select,
   SelectContent,
@@ -108,9 +109,17 @@ export function TicketDetail({ documentId }: TicketDetailProps) {
 
   if (isLoading) {
     return (
-      <p className="py-12 text-center text-sm text-muted-foreground">
-        Loading ticket…
-      </p>
+      <div className="space-y-6">
+        <Skeleton className="h-8 w-32" />
+        <div className="grid gap-6 lg:grid-cols-[1fr_280px]">
+          <div className="space-y-4">
+            <Skeleton className="h-8 w-2/3" />
+            <Skeleton className="h-40 w-full" />
+            <Skeleton className="h-32 w-full" />
+          </div>
+          <Skeleton className="h-64 w-full" />
+        </div>
+      </div>
     );
   }
   if (isError || !ticket) {

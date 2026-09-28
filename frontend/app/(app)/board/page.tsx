@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Plus } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 import { KanbanBoard } from "@/components/board/kanban-board";
 import {
   DEFAULT_FILTERS,
@@ -77,9 +78,19 @@ export default function BoardPage() {
       />
 
       {isLoading && (
-        <p className="py-12 text-center text-sm text-muted-foreground">
-          Loading board…
-        </p>
+        <div className="flex gap-3 overflow-x-auto pb-4">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <div
+              key={i}
+              className="flex w-72 shrink-0 flex-col gap-2 rounded-lg bg-muted/40 p-2"
+            >
+              <Skeleton className="mx-1 h-5 w-24" />
+              {Array.from({ length: 3 }).map((_, j) => (
+                <Skeleton key={j} className="h-20 w-full" />
+              ))}
+            </div>
+          ))}
+        </div>
       )}
       {isError && (
         <p className="py-12 text-center text-sm text-destructive">

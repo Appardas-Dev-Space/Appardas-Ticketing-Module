@@ -161,6 +161,12 @@ export interface ActivityLog {
   toValue?: string | null;
   createdAt: string;
   actor?: UserRef | null;
+  ticket?: {
+    id: number;
+    documentId: string;
+    title: string;
+    status?: TicketStatus;
+  } | null;
 }
 
 export interface Ticket {

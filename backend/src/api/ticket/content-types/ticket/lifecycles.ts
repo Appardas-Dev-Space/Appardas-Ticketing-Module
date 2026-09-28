@@ -75,7 +75,14 @@ export default {
     });
 
     const lastRank = last.length ? last[0].rank : null;
-    data.rank = generateKeyBetween(lastRank ?? null, null);
+    try {
+      data.rank = generateKeyBetween(lastRank ?? null, null);
+    } catch {
+      // The column contains a legacy/non-fractional rank (e.g. an imported
+      // LexoRank like "0|hzzzzz:"). Fall back to a fresh key so ticket
+      // creation never fails; the new card lands at the bottom of the column.
+      data.rank = generateKeyBetween(null, null);
+    }
   },
 
   /**

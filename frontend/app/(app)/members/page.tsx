@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Plus } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 import { InviteMemberDialog } from "@/components/members/invite-member-dialog";
 import { MembersTable } from "@/components/members/members-table";
 import { useMembers, useTickets } from "@/lib/queries";
@@ -50,9 +51,15 @@ export default function MembersPage() {
       </div>
 
       {isLoading && (
-        <p className="py-12 text-center text-sm text-muted-foreground">
-          Loading members…
-        </p>
+        <div className="space-y-2 rounded-lg border p-4">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <div key={i} className="flex items-center gap-3 py-2">
+              <Skeleton className="h-8 w-8 rounded-full" />
+              <Skeleton className="h-4 w-40" />
+              <Skeleton className="ml-auto h-8 w-[150px]" />
+            </div>
+          ))}
+        </div>
       )}
       {isError && (
         <p className="py-12 text-center text-sm text-destructive">

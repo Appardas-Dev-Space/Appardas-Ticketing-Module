@@ -10,6 +10,7 @@ import { generateKeyBetween } from "fractional-indexing";
 
 import { apiFetch } from "./api-client";
 import type {
+  ActivityLog,
   Label,
   Member,
   RoleType,
@@ -29,6 +30,7 @@ export const qk = {
   members: ["members"] as const,
   sprints: ["sprints"] as const,
   labels: ["labels"] as const,
+  activity: ["activity-logs"] as const,
 };
 
 /* -------------------------------------------------------------------------- */
@@ -128,6 +130,19 @@ export function useLabels() {
       return res.data ?? [];
     },
     staleTime: 5 * 60 * 1000,
+  });
+}
+
+export function useActivityLogs(limit = 15) {
+  return useQuery({
+    queryKey: [...qk.activity, limit] as const,
+    queryFn: async () => {
+      const res = await apiFetch<{ data: ActivityLog[] }>(
+        `activity-logs?sort[0]=createdAt:desc&pagination[pageSize]=${limit}`
+      );
+      return res.data ?? [];
+    },
+    refetchInterval: 30 * 1000,
   });
 }
 

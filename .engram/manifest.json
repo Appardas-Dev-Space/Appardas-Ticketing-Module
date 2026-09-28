@@ -16,8 +16,8 @@
     "hash": "46eb1a5d79f476e192cab2420845e348"
   },
   "backend/config/plugins.ts": {
-    "mtime": 1790516242819.7166,
-    "hash": "2ccada5f67c24e1971352dcb8b8c2ea1"
+    "mtime": 1790538618225.7688,
+    "hash": "95ac056ac350bf0d1f913c744eed59a9"
   },
   "backend/config/server.ts": {
     "mtime": 1790516242819.9966,
@@ -32,8 +32,8 @@
     "hash": "47217521e9cbeb1631678f5454a764f5"
   },
   "backend/src/api/activity-log/controllers/activity-log.ts": {
-    "mtime": 1790530721109.5525,
-    "hash": "449bb422d89e0ab1a00bbcd9e6ed24da"
+    "mtime": 1790580181101.4023,
+    "hash": "ee33a09a7664e43a6aa006b79399ab0c"
   },
   "backend/src/api/activity-log/routes/activity-log.ts": {
     "mtime": 1790530727061.1052,
@@ -44,8 +44,8 @@
     "hash": "afb1e832a8b03aa8f227c76e4f3174e5"
   },
   "backend/src/api/comment/controllers/comment.ts": {
-    "mtime": 1790530670816.3323,
-    "hash": "aa7aa957567bc2c224e1f740708cbc20"
+    "mtime": 1790540324606.96,
+    "hash": "8702e24715cb4bcf4214c116e6d9af4d"
   },
   "backend/src/api/comment/routes/comment.ts": {
     "mtime": 1790530676655.9045,
@@ -80,8 +80,8 @@
     "hash": "1abbbe6868f366499b7efd35f71d5159"
   },
   "backend/src/api/ticket/controllers/ticket.ts": {
-    "mtime": 1790535602092.503,
-    "hash": "c1279c486e7d73cae083494fe2d67104"
+    "mtime": 1790540569277.124,
+    "hash": "414a3b9e61eaabf8162c6552c485cbe8"
   },
   "backend/src/api/ticket/routes/ticket.ts": {
     "mtime": 1790532603494.8064,
@@ -96,11 +96,11 @@
     "hash": "2a97a9acbbf84e77b651dc024f40ac28"
   },
   "backend/types/generated/components.d.ts": {
-    "mtime": 1790537418597.6033,
+    "mtime": 1790543199684.54,
     "hash": "0c2f693dcf0a4091e230e67c36c7851f"
   },
   "backend/types/generated/contentTypes.d.ts": {
-    "mtime": 1790537418596.5415,
+    "mtime": 1790543199676.8403,
     "hash": "4361bc8db102aee3f08e43797302a76c"
   },
   "frontend/app/layout.tsx": {
@@ -208,8 +208,8 @@
     "hash": "1738a0eb64e87642d402d110663108c0"
   },
   "backend/src/api/ticket/content-types/ticket/lifecycles.ts": {
-    "mtime": 1790535061498.3486,
-    "hash": "ebb2fe25d9fa48bacfe4370246261239"
+    "mtime": 1790581232771.8562,
+    "hash": "0128d978fce8abb735a702517ea3936f"
   },
   "backend/src/api/ticket/routes/00-overdue.ts": {
     "mtime": 1790535074383.1465,
@@ -224,20 +224,20 @@
     "hash": "e175c44a91ed392f62c49a0b1f3c946f"
   },
   "frontend/app/(app)/board/page.tsx": {
-    "mtime": 1790536789101.8525,
-    "hash": "93a98840471802a54e5e271a11f94085"
+    "mtime": 1790580503221.0115,
+    "hash": "377ec55f909cfb0c8b0a495b8644fb25"
   },
   "frontend/app/(app)/dashboard/page.tsx": {
-    "mtime": 1790536805059.9556,
-    "hash": "38a5e268953e3170c86ffd4d5cc4cf0a"
+    "mtime": 1790580480302.6655,
+    "hash": "adc098ec060ae46851c11f828bdd7199"
   },
   "frontend/app/(app)/layout.tsx": {
     "mtime": 1790536782028.728,
     "hash": "4cad847163a8ebb1e0cc0f297858bbf3"
   },
   "frontend/app/(app)/members/page.tsx": {
-    "mtime": 1790536797189.3315,
-    "hash": "32f2d5bc167ca2251e84e1a2403c0877"
+    "mtime": 1790580521656.9265,
+    "hash": "a541f1a278da3db33efaf75cf0d946da"
   },
   "frontend/app/(auth)/login/page.tsx": {
     "mtime": 1790536753116.095,
@@ -276,8 +276,8 @@
     "hash": "d1217533c9719bce17760dddccdbc69c"
   },
   "frontend/lib/types.ts": {
-    "mtime": 1790536635282.1506,
-    "hash": "d64f93ea8fb3fa3a60ba1913f6afe9e1"
+    "mtime": 1790580193039.571,
+    "hash": "208772253a6e878ae6d04b3b978e39cc"
   },
   "frontend/lib/use-session.ts": {
     "mtime": 1790536723354.223,
@@ -286,5 +286,81 @@
   "frontend/middleware.ts": {
     "mtime": 1790536714056.2302,
     "hash": "456fb2d123ff4445d18caa1f51edfd27"
+  },
+  "frontend/app/(app)/tickets/[documentId]/page.tsx": {
+    "mtime": 1790539461908.3796,
+    "hash": "911e8c2c41bda54cb8ae8086600777a1"
+  },
+  "frontend/components/board/deadline-badge.tsx": {
+    "mtime": 1790538883530.2085,
+    "hash": "71a73dc86ca811a4b4ea1fea240f3136"
+  },
+  "frontend/components/board/filter-bar.tsx": {
+    "mtime": 1790539315856.8674,
+    "hash": "6676de8bb4b519560039d2c040c84c93"
+  },
+  "frontend/components/board/kanban-board.tsx": {
+    "mtime": 1790539183135.128,
+    "hash": "12404769f5b83b7dc3f5bd3bbb1cdda1"
+  },
+  "frontend/components/board/kanban-column.tsx": {
+    "mtime": 1790539034449.4429,
+    "hash": "66072efcef4e97643c86e36a38281e6e"
+  },
+  "frontend/components/board/ticket-card.tsx": {
+    "mtime": 1790538948797.836,
+    "hash": "600dc37ec4cb1bffda9933a2641a22d2"
+  },
+  "frontend/components/board/ticket-form-dialog.tsx": {
+    "mtime": 1790539361196.8616,
+    "hash": "5f4fa28ecefb33ff6f7d7a3cf7008d3f"
+  },
+  "frontend/components/dashboard/activity-feed.tsx": {
+    "mtime": 1790580462138.363,
+    "hash": "1870024edb61e559fb19f6a0f8f63601"
+  },
+  "frontend/components/dashboard/distribution.tsx": {
+    "mtime": 1790580297841.8652,
+    "hash": "7f62801ab924d557f9059f342997b5fe"
+  },
+  "frontend/components/dashboard/kpi-cards.tsx": {
+    "mtime": 1790580281063.3186,
+    "hash": "b90cc1872a5aa4da012738a322168641"
+  },
+  "frontend/components/dashboard/team-workload.tsx": {
+    "mtime": 1790580314491.198,
+    "hash": "6e320bd3eb7c5c356532ba463732a4a8"
+  },
+  "frontend/components/members/invite-member-dialog.tsx": {
+    "mtime": 1790541512853.6306,
+    "hash": "2dd34ba5df23c8fc35b862b6f5e0de3b"
+  },
+  "frontend/components/members/members-table.tsx": {
+    "mtime": 1790580249981.4434,
+    "hash": "2ecb7d2e3e14fe7bc1d230fee09752ba"
+  },
+  "frontend/components/tickets/ticket-detail.tsx": {
+    "mtime": 1790580541842.3137,
+    "hash": "2b8109df06b25b4d142438f489e70ef6"
+  },
+  "frontend/components/ui/skeleton.tsx": {
+    "mtime": 1790580260226.349,
+    "hash": "f0a3e9f04e9c2957b5d733bc0aad0a7f"
+  },
+  "frontend/components/ui/textarea.tsx": {
+    "mtime": 1790538671726.9463,
+    "hash": "57237b5bd667e95e076458f82788a9b0"
+  },
+  "frontend/lib/deadline.ts": {
+    "mtime": 1790538658758.17,
+    "hash": "ed777411a146b3e68e57e15b97d64f2d"
+  },
+  "frontend/lib/queries.ts": {
+    "mtime": 1790580226103.793,
+    "hash": "797a8ed0f2cbb32a89eef12147e2a50e"
+  },
+  "frontend/lib/workload.ts": {
+    "mtime": 1790580237912.577,
+    "hash": "474aa56d75cd72893dff049dfbbd6fbc"
   }
 }
