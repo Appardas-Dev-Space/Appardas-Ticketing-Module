@@ -336,6 +336,46 @@ export function useDeactivateMember() {
 }
 
 /* -------------------------------------------------------------------------- */
+/*  Account — self-service (any authenticated user edits only themselves)     */
+/* -------------------------------------------------------------------------- */
+
+export interface ProfileValues {
+  username?: string;
+  email?: string;
+  displayName?: string;
+  title?: string;
+}
+
+export function useUpdateProfile() {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: async (values: ProfileValues) =>
+      apiFetch<{ data: Member }>("account", {
+        method: "PUT",
+        body: JSON.stringify(values),
+      }),
+    onSuccess: () => {
+      // Refresh the session so the nav name/avatar update immediately.
+      queryClient.invalidateQueries({ queryKey: ["session"] });
+      queryClient.invalidateQueries({ queryKey: qk.members });
+    },
+  });
+}
+
+export function useChangePassword() {
+  return useMutation({
+    mutationFn: async (values: {
+      currentPassword: string;
+      newPassword: string;
+    }) =>
+      apiFetch<{ data: { success: boolean } }>("account/password", {
+        method: "PUT",
+        body: JSON.stringify(values),
+      }),
+  });
+}
+
+/* -------------------------------------------------------------------------- */
 /*  Fractional-rank helpers                                                   */
 /* -------------------------------------------------------------------------- */
 

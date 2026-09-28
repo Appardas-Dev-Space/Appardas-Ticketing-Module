@@ -226,7 +226,7 @@ export function KanbanBoard({ tickets, user, onOpenTicket }: KanbanBoardProps) {
       onDragEnd={handleDragEnd}
       onDragCancel={() => setActiveId(null)}
     >
-      <div className="flex gap-3 overflow-x-auto pb-4">
+      <div className="flex gap-4 overflow-x-auto pb-4">
         {TICKET_STATUSES.map((status) => (
           <KanbanColumn
             key={status}

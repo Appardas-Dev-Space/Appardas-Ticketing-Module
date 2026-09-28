@@ -96,11 +96,11 @@
     "hash": "2a97a9acbbf84e77b651dc024f40ac28"
   },
   "backend/types/generated/components.d.ts": {
-    "mtime": 1790543199684.54,
+    "mtime": 1790586155919.7473,
     "hash": "0c2f693dcf0a4091e230e67c36c7851f"
   },
   "backend/types/generated/contentTypes.d.ts": {
-    "mtime": 1790543199676.8403,
+    "mtime": 1790586155913.0996,
     "hash": "4361bc8db102aee3f08e43797302a76c"
   },
   "frontend/app/layout.tsx": {
@@ -176,12 +176,12 @@
     "hash": "db7b829fcdfc25c7b060519eaf19692a"
   },
   "IMPLEMENTATION_PLAN.md": {
-    "mtime": 1790515364164.7615,
-    "hash": "3aaa8df9686131f7fa276f426e65d172"
+    "mtime": 1790587025657.089,
+    "hash": "1165da0153afdae29910336bfd8b9282"
   },
   "README.md": {
-    "mtime": 1790503877394.6367,
-    "hash": "2f12106ff07bf7f77a4ff52dd0af1ae0"
+    "mtime": 1790587053340.765,
+    "hash": "507db8a7b54ca193605fbeeda70b3f8d"
   },
   "backend/README.md": {
     "mtime": 1790516242810.343,
@@ -362,5 +362,17 @@
   "frontend/lib/workload.ts": {
     "mtime": 1790580237912.577,
     "hash": "474aa56d75cd72893dff049dfbbd6fbc"
+  },
+  "backend/scripts/seed.ts": {
+    "mtime": 1790583673286.6077,
+    "hash": "d471a1098ed30be161947f0a9903177e"
+  },
+  "backend/scripts/verify-rbac.ts": {
+    "mtime": 1790583775569.719,
+    "hash": "d79a933ac7ad303b755450e198065203"
+  },
+  "DEPLOYMENT.md": {
+    "mtime": 1790584523315.702,
+    "hash": "3a47554802e297eaad1c3ef92a9be691"
   }
 }

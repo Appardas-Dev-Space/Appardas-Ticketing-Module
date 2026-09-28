@@ -189,62 +189,62 @@ Strapi's `/api/auth/local` returns the JWT **in the JSON response body** (not a 
 ## 7. Implementation Phases (Revised Timeline)
 
 ### Phase 0 — Environment Setup (0.5 day)
-- [ ] PostgreSQL (local or Docker).
-- [ ] `npx create-strapi-app@latest backend --dbclient=postgres` (v5).
-- [ ] `npx create-next-app@latest frontend --typescript --tailwind --app`.
-- [ ] `npx shadcn@latest init` in frontend; install `@tanstack/react-query`, `@dnd-kit/core`, `fractional-indexing`.
-- [ ] Optional `docker-compose.yml` for Postgres + Strapi.
+- [x] PostgreSQL (local or Docker).
+- [x] `npx create-strapi-app@latest backend --dbclient=postgres` (v5).
+- [x] `npx create-next-app@latest frontend --typescript --tailwind --app`.
+- [x] `npx shadcn@latest init` in frontend; install `@tanstack/react-query`, `@dnd-kit/core`, `fractional-indexing`.
+- [x] Optional `docker-compose.yml` for Postgres + Strapi.
 
 ### Phase 1 — Backend Data Modeling (1–2 days)
-- [ ] Content types: `Ticket`, `Sprint`, `Comment`, `Label`, **`ActivityLog`**.
-- [ ] Extend `User`.
-- [ ] Define relations; `rank` as String.
-- [ ] Seed enums + sample data (with valid fractional ranks).
+- [x] Content types: `Ticket`, `Sprint`, `Comment`, `Label`, **`ActivityLog`**.
+- [x] Extend `User`.
+- [x] Define relations; `rank` as String.
+- [x] Seed enums + sample data (with valid fractional ranks).
 
 ### Phase 2 — Auth & Custom RBAC (**2–3 days**, was 1–2)
-- [ ] Configure roles: Scrum Master, Lead Dev, Developer, Viewer.
-- [ ] Set coarse plugin permissions per content type.
-- [ ] **Custom policy `is-manager`** (`scrum_master` | `lead_dev`) for create/delete.
-- [ ] **Custom `ticket.update` controller** implementing row + field-level auth (see §11.A).
-- [ ] **Custom member controller** — no default user CRUD exposure (see §11.B).
-- [ ] Test JWT login + each role's write boundaries via API.
+- [x] Configure roles: Scrum Master, Lead Dev, Developer, Viewer.
+- [x] Set coarse plugin permissions per content type.
+- [x] **Custom policy `is-manager`** (`scrum_master` | `lead_dev`) for create/delete.
+- [x] **Custom `ticket.update` controller** implementing row + field-level auth (see §11.A).
+- [x] **Custom member controller** — no default user CRUD exposure (see §11.B).
+- [x] Test JWT login + each role's write boundaries via API.
 
 ### Phase 3 — Core API Behaviors (**2 days**)
-- [ ] Auto-set `reporter` on create (server-side).
-- [ ] Lifecycle hooks: write `ActivityLog` entries on status/assignee/deadline/priority change.
-- [ ] `rank` assignment on create (append to column end).
-- [ ] Overdue filter endpoint (`deadline < now && status != done`).
+- [x] Auto-set `reporter` on create (server-side).
+- [x] Lifecycle hooks: write `ActivityLog` entries on status/assignee/deadline/priority change.
+- [x] `rank` assignment on create (append to column end).
+- [x] Overdue filter endpoint (`deadline < now && status != done`).
 
 ### Phase 4 — Frontend Foundation + BFF (**1.5 days**)
-- [ ] Tailwind tokens + shadcn/ui setup (Dialog, Select, DropdownMenu, Avatar, Badge, DatePicker).
-- [ ] BFF: `/api/auth/login`, `/api/auth/logout`, session route, proxy handlers.
-- [ ] `middleware.ts` route guard; role-aware nav.
-- [ ] TanStack Query provider + typed API client.
+- [x] Tailwind tokens + shadcn/ui setup (Dialog, Select, DropdownMenu, Avatar, Badge, DatePicker).
+- [x] BFF: `/api/auth/login`, `/api/auth/logout`, session route, proxy handlers.
+- [x] `middleware.ts` route guard; role-aware nav.
+- [x] TanStack Query provider + typed API client.
 
 ### Phase 5 — Ticketing UI (**3–4 days**, was 2–3)
-- [ ] **Kanban** with `@dnd-kit` + **optimistic updates** via TanStack Query.
-- [ ] Fractional-index recompute on drop; background sync to Strapi.
-- [ ] Edge cases: drag cancellation, keyboard navigation, empty columns.
-- [ ] Ticket create/edit modal (role-gated via shadcn `Dialog`).
-- [ ] Ticket detail: comments, attachments, **activity log** stream.
-- [ ] Filters: status, priority, assignee, deadline.
-- [ ] Deadline badges (overdue / due-soon / on-track) in **local timezone**.
+- [x] **Kanban** with `@dnd-kit` + **optimistic updates** via TanStack Query.
+- [x] Fractional-index recompute on drop; background sync to Strapi.
+- [x] Edge cases: drag cancellation, keyboard navigation, empty columns.
+- [x] Ticket create/edit modal (role-gated via shadcn `Dialog`).
+- [x] Ticket detail: comments, attachments, **activity log** stream.
+- [x] Filters: status, priority, assignee, deadline.
+- [x] Deadline badges (overdue / due-soon / on-track) in **local timezone**.
 
 ### Phase 6 — Member Management (**1 day**)
-- [ ] Members list (Scrum Master / Lead Dev only).
-- [ ] **MVP invite = direct-add with temp password** (no SMTP dependency).
-- [ ] Edit role (bounded — cannot self-escalate), deactivate (`isActive=false`).
-- [ ] Per-member workload view.
+- [x] Members list (Scrum Master / Lead Dev only).
+- [x] **MVP invite = direct-add with temp password** (no SMTP dependency).
+- [x] Edit role (bounded — cannot self-escalate), deactivate (`isActive=false`).
+- [x] Per-member workload view.
 
 ### Phase 7 — Dashboard & Polish (1–2 days)
-- [ ] Metrics: open/closed, overdue, per-member load.
-- [ ] Empty states, skeletons, error handling.
-- [ ] Responsive pass (mobile Kanban → list view).
+- [x] Metrics: open/closed, overdue, per-member load.
+- [x] Empty states, skeletons, error handling.
+- [x] Responsive pass (mobile Kanban → list view).
 
 ### Phase 8 — QA & Deploy (1–2 days)
-- [ ] Seed script.
-- [ ] **Per-role test matrix** (verify field/row auth cannot be bypassed).
-- [ ] Env config; deploy Strapi (Render/Railway/VPS) + Postgres; Next.js (Vercel).
+- [x] Seed script.
+- [x] **Per-role test matrix** (verify field/row auth cannot be bypassed).
+- [x] Env config; deploy Strapi (Render/Railway/VPS) + Postgres; Next.js (Vercel).
 
 > **Revised MVP timeline: ~13–17 working days** (single dev). RBAC and Kanban DnD are the primary risk areas.
 
@@ -390,13 +390,13 @@ export default factories.createCoreController('api::ticket.ticket', ({ strapi })
 ---
 
 ## 13. Definition of Done (MVP)
-
-- [ ] Scrum Master & Lead Dev can create, edit, delete tickets.
-- [ ] Developers can update **only `status`** on **assigned** tickets (verified unbypassable via API).
-- [ ] Members added/role-edited/deactivated via **guarded controller** (no privilege escalation path).
-- [ ] Tickets have UTC deadlines rendered in local time with overdue/due-soon indicators.
-- [ ] Kanban with dnd-kit + optimistic updates + fractional `rank` (`O(1)` moves).
-- [ ] Activity log records system events server-side.
-- [ ] JWT held in httpOnly cookie via BFF; no token in client JS.
-- [ ] Dashboard shows core metrics.
-- [ ] App deployed and reachable.
+ 
+- [x] Scrum Master & Lead Dev can create, edit, delete tickets.
+- [x] Developers can update **only `status`** on **assigned** tickets (verified unbypassable via API).
+- [x] Members added/role-edited/deactivated via **guarded controller** (no privilege escalation path).
+- [x] Tickets have UTC deadlines rendered in local time with overdue/due-soon indicators.
+- [x] Kanban with dnd-kit + optimistic updates + fractional `rank` (`O(1)` moves).
+- [x] Activity log records system events server-side.
+- [x] JWT held in httpOnly cookie via BFF; no token in client JS.
+- [x] Dashboard shows core metrics.
+- [x] App deployed and reachable.

@@ -27,8 +27,8 @@ export function KanbanColumn({
   const { setNodeRef, isOver } = useDroppable({ id: status });
 
   return (
-    <div className="flex w-72 shrink-0 flex-col rounded-lg bg-muted/40">
-      <div className="flex items-center justify-between px-3 py-2">
+    <div className="flex w-80 shrink-0 flex-col rounded-xl bg-muted/40">
+      <div className="flex items-center justify-between px-3 py-2.5">
         <h2 className="text-sm font-semibold">{STATUS_LABELS[status]}</h2>
         <span className="rounded-full bg-background px-2 py-0.5 text-xs text-muted-foreground">
           {tickets.length}
@@ -42,7 +42,7 @@ export function KanbanColumn({
         <div
           ref={setNodeRef}
           className={cn(
-            "flex min-h-[120px] flex-1 flex-col gap-2 p-2 transition-colors",
+            "flex min-h-[140px] flex-1 flex-col gap-2.5 p-2.5 transition-colors",
             isOver && "bg-primary/5"
           )}
         >

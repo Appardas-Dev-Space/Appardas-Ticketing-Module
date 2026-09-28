@@ -78,15 +78,15 @@ export default function BoardPage() {
       />
 
       {isLoading && (
-        <div className="flex gap-3 overflow-x-auto pb-4">
+        <div className="flex gap-4 overflow-x-auto pb-4">
           {Array.from({ length: 5 }).map((_, i) => (
             <div
               key={i}
-              className="flex w-72 shrink-0 flex-col gap-2 rounded-lg bg-muted/40 p-2"
+              className="flex w-80 shrink-0 flex-col gap-2.5 rounded-xl bg-muted/40 p-2.5"
             >
               <Skeleton className="mx-1 h-5 w-24" />
               {Array.from({ length: 3 }).map((_, j) => (
-                <Skeleton key={j} className="h-20 w-full" />
+                <Skeleton key={j} className="h-24 w-full" />
               ))}
             </div>
           ))}

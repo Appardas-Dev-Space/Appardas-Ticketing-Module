@@ -4,11 +4,19 @@ import * as React from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useQueryClient } from "@tanstack/react-query";
-import { LogOut } from "lucide-react";
+import { ChevronDown, LogOut, Settings, User } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { useSession } from "@/lib/use-session";
 import { isManager, ROLE_LABELS } from "@/lib/types";
 
@@ -51,13 +59,16 @@ export function Nav() {
     : null;
 
   return (
-    <header className="border-b bg-background">
-      <div className="mx-auto flex h-14 max-w-7xl items-center gap-6 px-4">
-        <Link href="/board" className="font-semibold tracking-tight">
+    <header className="sticky top-0 z-40 border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="mx-auto flex h-14 max-w-7xl items-center gap-4 px-4 sm:gap-6">
+        <Link
+          href="/board"
+          className="font-semibold tracking-tight transition-opacity hover:opacity-80"
+        >
           Appardas
         </Link>
 
-        <nav className="flex items-center gap-1">
+        <nav className="flex items-center gap-1 overflow-x-auto">
           {links.map((link) => {
             const active =
               pathname === link.href || pathname.startsWith(`${link.href}/`);
@@ -78,34 +89,63 @@ export function Nav() {
           })}
         </nav>
 
-        <div className="ml-auto flex items-center gap-3">
+        <div className="ml-auto flex items-center gap-1.5">
+          <ThemeToggle />
+
           {user ? (
-            <>
-              <div className="hidden items-center gap-2 sm:flex">
-                <Avatar className="h-8 w-8">
-                  {user.avatar?.url ? (
-                    <AvatarImage src={user.avatar.url} alt={displayName} />
-                  ) : null}
-                  <AvatarFallback>{initials(displayName || "U")}</AvatarFallback>
-                </Avatar>
-                <div className="leading-tight">
-                  <div className="text-sm font-medium">{displayName}</div>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button
+                  className="flex items-center gap-2 rounded-full py-1 pl-1 pr-1.5 text-sm transition-colors hover:bg-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                  aria-label="Account menu"
+                >
+                  <Avatar className="h-8 w-8">
+                    {user.avatar?.url ? (
+                      <AvatarImage src={user.avatar.url} alt={displayName} />
+                    ) : null}
+                    <AvatarFallback>
+                      {initials(displayName || "U")}
+                    </AvatarFallback>
+                  </Avatar>
+                  <span className="hidden max-w-[8rem] truncate font-medium sm:inline">
+                    {displayName}
+                  </span>
+                  <ChevronDown className="hidden h-4 w-4 text-muted-foreground sm:inline" />
+                </button>
+              </DropdownMenuTrigger>
+
+              <DropdownMenuContent align="end" className="w-56">
+                <DropdownMenuLabel className="flex flex-col gap-1">
+                  <span className="truncate">{displayName}</span>
                   {roleLabel ? (
-                    <Badge variant="secondary" className="mt-0.5">
+                    <Badge variant="secondary" className="w-fit font-normal">
                       {roleLabel}
                     </Badge>
                   ) : null}
-                </div>
-              </div>
-              <Button
-                variant="ghost"
-                size="icon"
-                aria-label="Log out"
-                onClick={logout}
-              >
-                <LogOut className="h-4 w-4" />
-              </Button>
-            </>
+                </DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem asChild>
+                  <Link href="/settings/profile" className="cursor-pointer">
+                    <User className="mr-2 h-4 w-4" />
+                    Profile Settings
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/settings" className="cursor-pointer">
+                    <Settings className="mr-2 h-4 w-4" />
+                    Settings
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem
+                  onSelect={logout}
+                  className="cursor-pointer text-destructive focus:text-destructive"
+                >
+                  <LogOut className="mr-2 h-4 w-4" />
+                  Logout
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           ) : null}
         </div>
       </div>

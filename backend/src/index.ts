@@ -42,7 +42,12 @@ const api = (name: string, actions: string[]) =>
  */
 // Users-permissions plugin action allowing a user to read their own profile
 // (`GET /api/users/me`). Required by the BFF session endpoint for every role.
-const SELF = ['plugin::users-permissions.user.me'];
+// Plus the self-service Account API (edit own profile / change own password).
+const SELF = [
+  'plugin::users-permissions.user.me',
+  'api::account.account.updateProfile',
+  'api::account.account.changePassword',
+];
 
 const PERMISSION_MATRIX: Record<string, string[]> = {
   scrum_master: [

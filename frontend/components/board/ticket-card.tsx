@@ -74,9 +74,10 @@ export function TicketCard({
       ref={overlay ? undefined : sortable.setNodeRef}
       style={style}
       className={cn(
-        "group rounded-lg border bg-card p-3 shadow-sm",
+        "group rounded-lg border bg-card p-4 transition-all",
+        "hover:border-primary/40",
         sortable.isDragging && !overlay && "opacity-40",
-        overlay && "rotate-1 shadow-lg ring-2 ring-primary/40"
+        overlay && "rotate-1 shadow-md ring-2 ring-primary/40"
       )}
     >
       <div className="flex items-start gap-2">

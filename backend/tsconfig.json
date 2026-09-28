@@ -39,6 +39,8 @@
     // Do not include test files
     "**/*.test.*",
     // Do not include plugins in the server compilation
-    "src/plugins/**"
+    "src/plugins/**",
+    // Standalone tooling scripts (seed, RBAC) are run via tsx, not the server build
+    "scripts/"
   ]
 }
